@@ -19,7 +19,35 @@ spring:
         max-wait: -1
         max-idle: 500
         min-idle: 0
+  rabbitmq:
+    host: 172.16.12.76
+    port: 5672
+    username: admin
+    password: admin
+  cloud:
+    stream:
+      bindings:
+        input:
+          #指定输入通道对应的主题名
+          destination: test_6
+          content-type: application/json
+        output:
+          destination: test_6
+          content-type: application/json
+  # spring cloud 服务调用
+eureka:
+  instance:
+    #  hostname: 192.168.104.104  # 在docker里，自动获取的ip是docker容器的，不是服务器的
+    #  instance-id: 192.168.104.104:8000
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://esm.hzfh.com:7000/eureka/,http://esm2.hzfh.com:7000/eureka/
+ribbon:
+  ReadTimeout: 6000
+  ConnectTimeout: 6000
 
+  maxAutoRetries: 0
 sqlLog:
   isUse: true
 

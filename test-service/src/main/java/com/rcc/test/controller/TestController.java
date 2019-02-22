@@ -4,20 +4,24 @@ import com.rcc.api.entity.TestParam;
 import com.rcc.api.entity.UserParam;
 import com.rcc.test.base.PageBean;
 import com.rcc.test.base.RestResult;
+import com.rcc.test.config.stream.StreamClient;
+import com.rcc.test.config.stream.StreamProducer;
 import com.rcc.test.exception.RestException;
 import com.rcc.test.service.UserService;
 import com.rcc.test.utils.RedisService;
+import com.rcc.test.utils.ResultUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.integration.support.MessageBuilder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.Date;
+
 
 @Api(tags = "测试控制器")
 @RestController
@@ -30,6 +34,8 @@ public class TestController {
     private UserService userService;
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private StreamProducer streamProducer;
 
     @GetMapping("/")
     public String home() {
@@ -102,4 +108,13 @@ public class TestController {
     public RestResult exception(@RequestBody @Validated TestParam testParam) throws RestException {
         throw new RestException(990104);
     }
+
+    @ApiOperation(value = "测试消息队列发送消息", tags = {"测试控制器"}, notes = "测试消息队列存放消息", response = RestResult.class, code = 0)
+    @PostMapping("/sendMessageMQ")
+    @ResponseBody
+    public RestResult sendMessageMQ(@RequestBody @Validated TestParam testParam) throws RestException {
+        boolean send = streamProducer.produceMsg(testParam);
+        return ResultUtil.success(send);
+    }
+
 }

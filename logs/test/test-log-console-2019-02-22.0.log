@@ -78,4 +78,1033 @@
 [0;39m2019-02-22 10:11:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m19916[0;39m [37m---[0;39m [33m[http-nio-8080-exec-1][0;39m [36mc.r.test.config.aop.HttpAspect:74[0;39m           [34m- [0;34m==> response: "2"[0m
 [0;39m2019-02-22 10:16:55 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m19916[0;39m [37m---[0;39m [33m[           Thread-15][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:208[0;39m          [34m- Shutting down ExecutorService 'applicationTaskExecutor'
 [0;39m2019-02-22 10:16:55 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m19916[0;39m [37m---[0;39m [33m[           Thread-15][0;39m [36mc.a.druid.pool.DruidDataSource:1908[0;39m         [34m- {dataSource-1} closed
+[0;39m2019-02-22 11:28:03 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22312[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 22312 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 11:28:03 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22312[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:28:04 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m22312[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:10)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:28:04 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m22312[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:10)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:32:29 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:205[0;39m        [34m- Fetching config from server at : http://localhost:8888
+[0;39m2019-02-22 11:32:31 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:227[0;39m        [34m- Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+[0;39m2019-02-22 11:32:31 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:140[0;39m        [31m- Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/service-test/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+[0;39m2019-02-22 11:32:31 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:32:31 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:10)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:32:31 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m20956[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:10)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:41:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:205[0;39m        [34m- Fetching config from server at : http://localhost:8888
+[0;39m2019-02-22 11:41:49 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:227[0;39m        [34m- Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+[0;39m2019-02-22 11:41:49 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mnfigServicePropertySourceLocator:140[0;39m        [31m- Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/service-test/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+[0;39m2019-02-22 11:41:49 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:41:50 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:41:50 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m17136[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:42:47 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21604[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:42:48 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m21604[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:42:48 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m21604[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:44:22 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m15488[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:44:23 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m15488[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:44:23 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m15488[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:14)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:45:29 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m20400[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:45:29 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m20400[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:16)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 11:45:29 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m20400[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:16)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 11:48:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 11:48:06 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:244[0;39m        [34m- Multiple Spring Data modules found, entering strict repository configuration mode!
+[0;39m2019-02-22 11:48:06 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:126[0;39m        [34m- Bootstrapping Spring Data repositories in DEFAULT mode.
+[0;39m2019-02-22 11:48:06 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:182[0;39m        [34m- Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.c.scope.GenericScope:294[0;39m              [34m- BeanFactory id=9d91e868-3a5a-3d9b-9062-1815f5c67d5c
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4246cae4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e60cde1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:90[0;39m              [34m- Tomcat initialized with port(s): 8080 (http)
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardService:173[0;39m              [34m- Starting service [Tomcat]
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardEngine:173[0;39m               [34m- Starting Servlet engine: [Apache Tomcat/9.0.16]
+[0;39m2019-02-22 11:48:07 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.AprLifecycleListener:173[0;39m            [34m- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+[0;39m2019-02-22 11:48:08 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring embedded WebApplicationContext
+[0;39m2019-02-22 11:48:08 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.web.context.ContextLoader:296[0;39m           [34m- Root WebApplicationContext: initialization completed in 2260 ms
+[0;39m2019-02-22 11:48:09 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mrcedRequestMappingHandlerMapping:69[0;39m         [34m- Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[0;39m2019-02-22 11:48:09 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.n.c.s.URLConfigurationSource:121[0;39m          [31m- No URLs will be polled as dynamic configuration sources.
+[0;39m2019-02-22 11:48:09 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.n.c.s.URLConfigurationSource:122[0;39m          [34m- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[0;39m2019-02-22 11:48:09 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.n.c.s.URLConfigurationSource:121[0;39m          [31m- No URLs will be polled as dynamic configuration sources.
+[0;39m2019-02-22 11:48:09 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.n.c.s.URLConfigurationSource:122[0;39m          [34m- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[0;39m2019-02-22 11:48:09 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:171[0;39m          [34m- Initializing ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 11:48:11 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.n.e.InstanceInfoFactory:71[0;39m            [34m- Setting initial instance status as: STARTING
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.c.n.e.s.EurekaServiceRegistry:42[0;39m         [34m- Registering application service-test with eureka with status UP
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:160[0;39m        [34m- Context refreshed
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:163[0;39m        [34m- Found 1 custom documentation plugin(s)
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.w.s.ApiListingReferenceScanner:41[0;39m         [34m- Scanning for api listing references
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:204[0;39m             [34m- Tomcat started on port(s): 8080 (http) with context path ''
+[0;39m2019-02-22 11:48:13 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:59[0;39m             [34m- Started TestServiceApplication in 9.72 seconds (JVM running for 11.289)
+[0;39m2019-02-22 11:49:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[http-nio-8080-exec-1][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[0;39m2019-02-22 11:49:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[http-nio-8080-exec-1][0;39m [36mo.s.w.s.DispatcherServlet:524[0;39m               [34m- Initializing Servlet 'dispatcherServlet'
+[0;39m2019-02-22 11:49:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[http-nio-8080-exec-1][0;39m [36mo.s.w.s.DispatcherServlet:546[0;39m               [34m- Completed initialization in 21 ms
+[0;39m2019-02-22 11:56:26 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[           Thread-26][0;39m [36m.s.c.n.e.s.EurekaServiceRegistry:65[0;39m         [34m- Unregistering application service-test with eureka with status DOWN
+[0;39m2019-02-22 11:56:29 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m7420[0;39m [37m---[0;39m [33m[           Thread-26][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:208[0;39m          [34m- Shutting down ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 12:00:18 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22360[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 22360 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 12:00:18 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22360[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 12:00:19 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m22360[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:13)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 12:00:19 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m22360[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1688)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:13)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 12:04:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m18640[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 18640 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 12:04:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m18640[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 12:04:41 [1;31mERROR[0;39m [32m[service-test,,,][0;39m [35m18640[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:858[0;39m              [1;31m- Application run failed
+[0;39mjava.lang.IllegalStateException: Error processing condition on org.springframework.cloud.stream.config.BindingServiceConfiguration.bindingService
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:181)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:13)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1023)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:195)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanTypeForNonAliasDefinition(BeanTypeRegistry.java:159)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.addBeanType(BeanTypeRegistry.java:152)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:140)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.updateTypesIfNecessary(BeanTypeRegistry.java:135)
+	at org.springframework.boot.autoconfigure.condition.BeanTypeRegistry.getNamesForType(BeanTypeRegistry.java:97)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:298)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:289)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:278)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:189)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:160)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 39 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 43 common frames omitted
+2019-02-22 12:04:41 [31mWARN [0;39m [32m[service-test,,,][0;39m [35m18640[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.boot.SpringApplication:839[0;39m              [31m- Unable to close ApplicationContext
+[0;39mjava.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.stream.config.BindingServiceConfiguration] from ClassLoader [sun.misc.Launcher$AppClassLoader@18b4aac2]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:686)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:583)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:568)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:626)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:738)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:679)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:647)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:507)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:477)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:590)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1226)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:905)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:891)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:877)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:826)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.rcc.test.TestServiceApplication.main(TestServiceApplication.java:13)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/integration/config/HandlerMethodArgumentResolversHolder
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:668)
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.integration.config.HandlerMethodArgumentResolversHolder
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 25 common frames omitted
+2019-02-22 12:08:15 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 22156 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 12:08:15 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:244[0;39m        [34m- Multiple Spring Data modules found, entering strict repository configuration mode!
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:126[0;39m        [34m- Bootstrapping Spring Data repositories in DEFAULT mode.
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:182[0;39m        [34m- Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:188[0;39m        [34m- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:275[0;39m        [34m- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:426[0;39m        [34m- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$221ed8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3bb62f60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$a6a7ea8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$8239f5af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$bb219e7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:90[0;39m              [34m- Tomcat initialized with port(s): 8080 (http)
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Initializing ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardService:173[0;39m              [34m- Starting service [Tomcat]
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardEngine:173[0;39m               [34m- Starting Servlet engine: [Apache Tomcat/9.0.16]
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.AprLifecycleListener:173[0;39m            [34m- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring embedded WebApplicationContext
+[0;39m2019-02-22 12:08:17 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.web.context.ContextLoader:296[0;39m           [34m- Root WebApplicationContext: initialization completed in 2798 ms
+[0;39m2019-02-22 12:08:19 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mrcedRequestMappingHandlerMapping:69[0;39m         [34m- Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[0;39m2019-02-22 12:08:19 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:171[0;39m          [34m- Initializing ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 12:08:20 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:171[0;39m         [34m- Initializing ExecutorService 'taskScheduler'
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel nullChannel
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel input
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel errorChannel
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel output
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:785[0;39m        [34m- Registering MessageHandler errorLogger
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.input' has 1 subscriber(s).
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 1 subscriber(s).
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:159[0;39m             [34m- started _org.springframework.integration.errorLogger
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory#5f781173:0/SimpleConnection@2b3d03b2 [delegate=amqp://admin@172.16.12.76:5672/, localPort= 62724]
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.output' has 1 subscriber(s).
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mp.RabbitExchangeQueueProvisioner:159[0;39m        [34m- declaring queue for inbound: test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ, bound to: test_6
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors' has 1 subscriber(s).
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors' has 2 subscriber(s).
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:159[0;39m        [34m- started inbound.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:160[0;39m        [34m- Context refreshed
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:163[0;39m        [34m- Found 1 custom documentation plugin(s)
+[0;39m2019-02-22 12:08:21 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.w.s.ApiListingReferenceScanner:41[0;39m         [34m- Scanning for api listing references
+[0;39m2019-02-22 12:08:22 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Starting ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 12:08:22 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:204[0;39m             [34m- Tomcat started on port(s): 8080 (http) with context path ''
+[0;39m2019-02-22 12:08:22 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:59[0;39m             [34m- Started TestServiceApplication in 8.001 seconds (JVM running for 9.303)
+[0;39m2019-02-22 12:08:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[0;39m2019-02-22 12:08:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:524[0;39m               [34m- Initializing Servlet 'dispatcherServlet'
+[0;39m2019-02-22 12:08:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:546[0;39m               [34m- Completed initialization in 19 ms
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:45[0;39m           [34m- [0;34m==> url:[0m http://localhost:8080/
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:47[0;39m           [34m- [0;34m==> method:  GET[0m
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:49[0;39m           [34m- [0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:51[0;39m           [34m- [0;34m==> class_method:  com.rcc.test.controller.TestController,home[0m
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:53[0;39m           [34m- [0;34m==> args:  [][0m
+[0;39m2019-02-22 12:08:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[http-nio-8080-exec-8][0;39m [36mc.r.test.config.aop.HttpAspect:74[0;39m           [34m- [0;34m==> response: "Hello World!"[0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:45[0;39m           [34m- [0;34m==> url:[0m http://localhost:8080/sendMessageMQ
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:47[0;39m           [34m- [0;34m==> method:  POST[0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:49[0;39m           [34m- [0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:51[0;39m           [34m- [0;34m==> class_method:  com.rcc.test.controller.TestController,sendMessageMQ[0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:53[0;39m           [34m- [0;34m==> args:  [{"message":"测试一下","time":1550808524778}][0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory.publisher#191303f0:0/SimpleConnection@4616de12 [delegate=amqp://admin@172.16.12.76:5672/, localPort= 62785]
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mo.s.a.rabbit.core.RabbitAdmin:578[0;39m           [34m- Auto-declaring a non-durable, auto-delete, or exclusive Queue (test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[ttp-nio-8080-exec-10][0;39m [36mc.r.test.config.aop.HttpAspect:74[0;39m           [34m- [0;34m==> response: {"errCode":"0","errDesc":"成功","items":true}[0m
+[0;39m2019-02-22 12:09:02 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[jmUFSY6moN8YYZ7WNQ-1][0;39m [36mc.r.t.c.stream.StreamReceiver:18[0;39m            [34m- ==> StreamReceiver: {"message":"测试一下","time":"2019-02-22T04:08:44.778+0000"}
+[0;39m2019-02-22 13:43:35 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:586[0;39m        [34m- Waiting for workers to finish.
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:589[0;39m        [34m- Successfully waited for workers to finish.
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:176[0;39m        [34m- stopped inbound.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors' has 1 subscriber(s).
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors' has 0 subscriber(s).
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 0 subscriber(s).
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:193[0;39m             [34m- stopped _org.springframework.integration.errorLogger
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:208[0;39m         [34m- Shutting down ExecutorService 'taskScheduler'
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:208[0;39m          [34m- Shutting down ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: nullChannel
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: input
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: errorChannel
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: output
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: test_6.anonymous.a6t_jmUFSY6moN8YYZ7WNQ.errors
+[0;39m2019-02-22 13:43:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m22156[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:498[0;39m        [34m- Summary on shutdown: _org.springframework.integration.errorLogger.handler
+[0;39m2019-02-22 13:43:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 25524 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 13:43:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:244[0;39m        [34m- Multiple Spring Data modules found, entering strict repository configuration mode!
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:126[0;39m        [34m- Bootstrapping Spring Data repositories in DEFAULT mode.
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:182[0;39m        [34m- Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:188[0;39m        [34m- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:275[0;39m        [34m- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+[0;39m2019-02-22 13:43:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:426[0;39m        [34m- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$fdda05f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$376e47c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$a26002f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$7df20e18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$b6d9b6e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:90[0;39m              [34m- Tomcat initialized with port(s): 8080 (http)
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Initializing ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardService:173[0;39m              [34m- Starting service [Tomcat]
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardEngine:173[0;39m               [34m- Starting Servlet engine: [Apache Tomcat/9.0.16]
+[0;39m2019-02-22 13:43:44 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.AprLifecycleListener:173[0;39m            [34m- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+[0;39m2019-02-22 13:43:45 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring embedded WebApplicationContext
+[0;39m2019-02-22 13:43:45 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.web.context.ContextLoader:296[0;39m           [34m- Root WebApplicationContext: initialization completed in 2604 ms
+[0;39m2019-02-22 13:43:46 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mrcedRequestMappingHandlerMapping:69[0;39m         [34m- Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[0;39m2019-02-22 13:43:47 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:171[0;39m          [34m- Initializing ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 13:43:47 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:171[0;39m         [34m- Initializing ExecutorService 'taskScheduler'
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel output
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel nullChannel
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel input
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel errorChannel
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:785[0;39m        [34m- Registering MessageHandler errorLogger
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.input' has 1 subscriber(s).
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 1 subscriber(s).
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:159[0;39m             [34m- started _org.springframework.integration.errorLogger
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory#48c3a0ef:0/SimpleConnection@34ff08c6 [delegate=amqp://admin@172.16.12.76:5672/, localPort= 54759]
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.output' has 1 subscriber(s).
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mp.RabbitExchangeQueueProvisioner:159[0;39m        [34m- declaring queue for inbound: test_6.anonymous.ayeY3oQqQquB18jYUVE40Q, bound to: test_6
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors' has 1 subscriber(s).
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors' has 2 subscriber(s).
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:159[0;39m        [34m- started inbound.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:160[0;39m        [34m- Context refreshed
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:163[0;39m        [34m- Found 1 custom documentation plugin(s)
+[0;39m2019-02-22 13:43:48 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.w.s.ApiListingReferenceScanner:41[0;39m         [34m- Scanning for api listing references
+[0;39m2019-02-22 13:43:49 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Starting ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 13:43:49 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:204[0;39m             [34m- Tomcat started on port(s): 8080 (http) with context path ''
+[0;39m2019-02-22 13:43:49 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:59[0;39m             [34m- Started TestServiceApplication in 7.66 seconds (JVM running for 8.914)
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:524[0;39m               [34m- Initializing Servlet 'dispatcherServlet'
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:546[0;39m               [34m- Completed initialization in 15 ms
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:45[0;39m           [34m- [0;34m==> url:[0m http://localhost:8080/sendMessageMQ
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:47[0;39m           [34m- [0;34m==> method:  POST[0m
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:49[0;39m           [34m- [0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:51[0;39m           [34m- [0;34m==> class_method:  com.rcc.test.controller.TestController,sendMessageMQ[0m
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:53[0;39m           [34m- [0;34m==> args:  [{"message":"测试一下a","time":1550808524778}][0m
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory.publisher#7da99ab5:0/SimpleConnection@77cc5faa [delegate=amqp://admin@172.16.12.76:5672/, localPort= 54782]
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.a.rabbit.core.RabbitAdmin:578[0;39m           [34m- Auto-declaring a non-durable, auto-delete, or exclusive Queue (test_6.anonymous.ayeY3oQqQquB18jYUVE40Q) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:74[0;39m           [34m- [0;34m==> response: {"errCode":"0","errDesc":"成功","items":true}[0m
+[0;39m2019-02-22 13:44:00 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[3oQqQquB18jYUVE40Q-1][0;39m [36mc.r.t.c.stream.StreamReceiver:18[0;39m            [34m- ==> StreamReceiver: {"message":"测试一下a","time":"2019-02-22T04:08:44.778+0000"}
+[0;39m2019-02-22 13:51:29 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:586[0;39m        [34m- Waiting for workers to finish.
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:589[0;39m        [34m- Successfully waited for workers to finish.
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:176[0;39m        [34m- stopped inbound.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors' has 1 subscriber(s).
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors' has 0 subscriber(s).
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 0 subscriber(s).
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:193[0;39m             [34m- stopped _org.springframework.integration.errorLogger
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:208[0;39m         [34m- Shutting down ExecutorService 'taskScheduler'
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:208[0;39m          [34m- Shutting down ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: test_6.anonymous.ayeY3oQqQquB18jYUVE40Q.errors
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: output
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: nullChannel
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: input
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: errorChannel
+[0;39m2019-02-22 13:51:30 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m25524[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:498[0;39m        [34m- Summary on shutdown: _org.springframework.integration.errorLogger.handler
+[0;39m2019-02-22 13:51:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:50[0;39m             [34m- Starting TestServiceApplication on DESKTOP-1PRI524 with PID 21724 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+[0;39m2019-02-22 13:51:36 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:679[0;39m            [34m- The following profiles are active: dev
+[0;39m2019-02-22 13:51:37 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:244[0;39m        [34m- Multiple Spring Data modules found, entering strict repository configuration mode!
+[0;39m2019-02-22 13:51:37 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:126[0;39m        [34m- Bootstrapping Spring Data repositories in DEFAULT mode.
+[0;39m2019-02-22 13:51:37 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.RepositoryConfigurationDelegate:182[0;39m        [34m- Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:188[0;39m        [34m- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:275[0;39m        [34m- No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mfiguringBeanFactoryPostProcessor:426[0;39m        [34m- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5134009e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ac84270] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$f5b9fd9f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration$$EnhancerBySpringCGLIB$$d14c08bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$a33b18c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:38 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36melegate$BeanPostProcessorChecker:330[0;39m        [34m- Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:90[0;39m              [34m- Tomcat initialized with port(s): 8080 (http)
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Initializing ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardService:173[0;39m              [34m- Starting service [Tomcat]
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.core.StandardEngine:173[0;39m               [34m- Starting Servlet engine: [Apache Tomcat/9.0.16]
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.AprLifecycleListener:173[0;39m            [34m- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring embedded WebApplicationContext
+[0;39m2019-02-22 13:51:39 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.web.context.ContextLoader:296[0;39m           [34m- Root WebApplicationContext: initialization completed in 2642 ms
+[0;39m2019-02-22 13:51:40 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mrcedRequestMappingHandlerMapping:69[0;39m         [34m- Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[0;39m2019-02-22 13:51:41 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:171[0;39m          [34m- Initializing ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:171[0;39m         [34m- Initializing ExecutorService 'taskScheduler'
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel output
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel nullChannel
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel errorChannel
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel input
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:785[0;39m        [34m- Registering MessageHandler errorLogger
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.input' has 1 subscriber(s).
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 1 subscriber(s).
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.e.EventDrivenConsumer:159[0;39m             [34m- started _org.springframework.integration.errorLogger
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory#78e97d4d:0/SimpleConnection@772bc4c9 [delegate=amqp://admin@172.16.12.76:5672/, localPort= 55380]
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.s.m.DirectWithAttributesChannel:64[0;39m         [34m- Channel 'service-test.output' has 1 subscriber(s).
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mp.RabbitExchangeQueueProvisioner:159[0;39m        [34m- declaring queue for inbound: test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g, bound to: test_6
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.i.m.IntegrationMBeanExporter:767[0;39m        [34m- Registering MessageChannel test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors' has 1 subscriber(s).
+[0;39m2019-02-22 13:51:42 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors' has 2 subscriber(s).
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:159[0;39m        [34m- started inbound.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:160[0;39m        [34m- Context refreshed
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mDocumentationPluginsBootstrapper:163[0;39m        [34m- Found 1 custom documentation plugin(s)
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36ms.w.s.ApiListingReferenceScanner:41[0;39m         [34m- Scanning for api listing references
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.a.c.http11.Http11NioProtocol:173[0;39m          [34m- Starting ProtocolHandler ["http-nio-8080"]
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mo.s.b.w.e.t.TomcatWebServer:204[0;39m             [34m- Tomcat started on port(s): 8080 (http) with context path ''
+[0;39m2019-02-22 13:51:43 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[                main][0;39m [36mc.r.t.TestServiceApplication:59[0;39m             [34m- Started TestServiceApplication in 7.603 seconds (JVM running for 9.38)
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.a.c.c.C.[.[localhost].[/]:173[0;39m             [34m- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:524[0;39m               [34m- Initializing Servlet 'dispatcherServlet'
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.w.s.DispatcherServlet:546[0;39m               [34m- Completed initialization in 14 ms
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:45[0;39m           [34m- [0;34m==> url:[0m http://localhost:8080/sendMessageMQ
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:47[0;39m           [34m- [0;34m==> method:  POST[0m
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:49[0;39m           [34m- [0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:51[0;39m           [34m- [0;34m==> class_method:  com.rcc.test.controller.TestController,sendMessageMQ[0m
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:53[0;39m           [34m- [0;34m==> args:  [{"message":"测试一下a","time":1550808524778}][0m
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36ms.a.r.c.CachingConnectionFactory:460[0;39m        [34m- Attempting to connect to: [172.16.12.76:5672]
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36ms.a.r.c.CachingConnectionFactory:496[0;39m        [34m- Created new connection: rabbitConnectionFactory.publisher#37a74769:0/SimpleConnection@7d980e06 [delegate=amqp://admin@172.16.12.76:5672/, localPort= 55435]
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mo.s.a.rabbit.core.RabbitAdmin:578[0;39m           [34m- Auto-declaring a non-durable, auto-delete, or exclusive Queue (test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[http-nio-8080-exec-2][0;39m [36mc.r.test.config.aop.HttpAspect:74[0;39m           [34m- [0;34m==> response: {"errCode":"0","errDesc":"成功","items":true}[0m
+[0;39m2019-02-22 13:52:16 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[-PkIQHihFLVcs7MO_g-1][0;39m [36mc.r.t.c.stream.StreamReceiver:18[0;39m            [34m- ==> StreamReceiver: {"message":"测试一下a","time":"2019-02-22T04:08:44.778+0000"}
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:586[0;39m        [34m- Waiting for workers to finish.
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36ml.SimpleMessageListenerContainer:589[0;39m        [34m- Successfully waited for workers to finish.
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36m.i.a.i.AmqpInboundChannelAdapter:176[0;39m        [34m- stopped inbound.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors' has 1 subscriber(s).
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.c.s.b.BinderErrorChannel:64[0;39m             [34m- Channel 'service-test.test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors' has 0 subscriber(s).
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:107[0;39m             [34m- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.c.PublishSubscribeChannel:64[0;39m          [34m- Channel 'service-test.errorChannel' has 0 subscriber(s).
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.e.EventDrivenConsumer:193[0;39m             [34m- stopped _org.springframework.integration.errorLogger
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskScheduler:208[0;39m         [34m- Shutting down ExecutorService 'taskScheduler'
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.s.c.ThreadPoolTaskExecutor:208[0;39m          [34m- Shutting down ExecutorService 'applicationTaskExecutor'
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: output
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: nullChannel
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: errorChannel
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: test_6.anonymous.l9BM-PkIQHihFLVcs7MO_g.errors
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:495[0;39m        [34m- Summary on shutdown: input
+[0;39m2019-02-22 13:53:05 [34mINFO [0;39m [32m[service-test,,,][0;39m [35m21724[0;39m [37m---[0;39m [33m[           Thread-19][0;39m [36mo.s.i.m.IntegrationMBeanExporter:498[0;39m        [34m- Summary on shutdown: _org.springframework.integration.errorLogger.handler
 [0;39m
