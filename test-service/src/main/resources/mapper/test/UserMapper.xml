@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rcc.test.dao.UserDao">
+	<resultMap id="resultMap" type="com.rcc.test.entity.UserEntity">
+		<result property="id" column="id"/>
+		<result property="name" column="name"/>
+    </resultMap>
+	<sql id="column">
+        id,name
+    </sql>
+    
+	<select id="findByWhere" resultMap="resultMap" parameterType="com.rcc.api.entity.UserParam">
+		SELECT <include refid="column" /> FROM user where 1=1
+		<if test="name!=null and name!=''">and name like CONCAT(#{name},'%')</if>
+	</select>
+
+
+
+</mapper>

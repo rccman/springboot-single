@@ -1,0 +1,80 @@
+2019-02-22 09:27:15,483[service-test,,,][INFO][ThreadPoolTaskExecutor-shutdown]-Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-22 09:27:15,558[service-test,,,][INFO][DruidDataSource-close]-{dataSource-1} closed
+2019-02-22 09:27:21,210[service-test,,,][INFO][TestServiceApplication-logStarting]-Starting TestServiceApplication on DESKTOP-1PRI524 with PID 19592 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+2019-02-22 09:27:21,214[service-test,,,][INFO][TestServiceApplication-logStartupProfileInfo]-The following profiles are active: dev
+2019-02-22 09:27:22,234[service-test,,,][INFO][RepositoryConfigurationDelegate-multipleStoresDetected]-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-22 09:27:22,237[service-test,,,][INFO][RepositoryConfigurationDelegate-registerRepositoriesIn]-Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-22 09:27:22,279[service-test,,,][INFO][RepositoryConfigurationDelegate-registerRepositoriesIn]-Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2019-02-22 09:27:22,638[service-test,,,][INFO][PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization]-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$515a526e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-22 09:27:23,157[service-test,,,][INFO][TomcatWebServer-initialize]-Tomcat initialized with port(s): 8080 (http)
+2019-02-22 09:27:23,174[service-test,,,][INFO][Http11NioProtocol-log]-Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-22 09:27:23,183[service-test,,,][INFO][StandardService-log]-Starting service [Tomcat]
+2019-02-22 09:27:23,184[service-test,,,][INFO][StandardEngine-log]-Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-22 09:27:23,254[service-test,,,][INFO][AprLifecycleListener-log]-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+2019-02-22 09:27:23,392[service-test,,,][INFO][[/]-log]-Initializing Spring embedded WebApplicationContext
+2019-02-22 09:27:23,393[service-test,,,][INFO][ContextLoader-prepareWebApplicationContext]-Root WebApplicationContext: initialization completed in 2114 ms
+2019-02-22 09:27:24,722[service-test,,,][INFO][PropertySourcedRequestMappingHandlerMapping-initHandlerMethods]-Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-22 09:27:24,893[service-test,,,][INFO][ThreadPoolTaskExecutor-initialize]-Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-22 09:27:25,415[service-test,,,][INFO][DocumentationPluginsBootstrapper-start]-Context refreshed
+2019-02-22 09:27:25,439[service-test,,,][INFO][DocumentationPluginsBootstrapper-start]-Found 1 custom documentation plugin(s)
+2019-02-22 09:27:25,480[service-test,,,][INFO][ApiListingReferenceScanner-scan]-Scanning for api listing references
+2019-02-22 09:27:25,682[service-test,,,][INFO][Http11NioProtocol-log]-Starting ProtocolHandler ["http-nio-8080"]
+2019-02-22 09:27:25,712[service-test,,,][INFO][TomcatWebServer-start]-Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-22 09:27:25,716[service-test,,,][INFO][TestServiceApplication-logStarted]-Started TestServiceApplication in 5.392 seconds (JVM running for 6.574)
+2019-02-22 09:44:39,455[service-test,,,][INFO][[/]-log]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-22 09:44:39,456[service-test,,,][INFO][DispatcherServlet-initServletBean]-Initializing Servlet 'dispatcherServlet'
+2019-02-22 09:44:39,471[service-test,,,][INFO][DispatcherServlet-initServletBean]-Completed initialization in 15 ms
+2019-02-22 09:44:39,504[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> url:[0m http://localhost:8080/user
+2019-02-22 09:44:39,504[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> method:  GET[0m
+2019-02-22 09:44:39,504[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+2019-02-22 09:44:39,506[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> class_method:  com.rcc.test.controller.TestController,findPageList[0m
+2019-02-22 09:44:39,531[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> args:  [][0m
+2019-02-22 09:44:39,654[service-test,,,][INFO][DruidDataSource-init]-{dataSource-1} inited
+2019-02-22 09:44:39,936[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> SELECT id,name FROM user where 1=1 and name like CONCAT('任','%')[0m
+2019-02-22 09:44:39,937[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> Total: 2      Spend Time: 332 ms[0m
+2019-02-22 09:44:39,939[service-test,,,][INFO][HttpAspect-doAfterReturing]-[0;34m==> response: "2"[0m
+2019-02-22 10:10:54,333[service-test,,,][INFO][ThreadPoolTaskExecutor-shutdown]-Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-22 10:10:54,421[service-test,,,][INFO][DruidDataSource-close]-{dataSource-1} closed
+2019-02-22 10:11:03,532[service-test,,,][INFO][TestServiceApplication-logStarting]-Starting TestServiceApplication on DESKTOP-1PRI524 with PID 19916 (E:\workspace\test\test-service\target\classes started by rencc in E:\workspace\test)
+2019-02-22 10:11:03,535[service-test,,,][INFO][TestServiceApplication-logStartupProfileInfo]-The following profiles are active: dev
+2019-02-22 10:11:04,778[service-test,,,][INFO][RepositoryConfigurationDelegate-multipleStoresDetected]-Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-22 10:11:04,782[service-test,,,][INFO][RepositoryConfigurationDelegate-registerRepositoriesIn]-Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-22 10:11:04,819[service-test,,,][INFO][RepositoryConfigurationDelegate-registerRepositoriesIn]-Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-02-22 10:11:05,186[service-test,,,][INFO][PostProcessorRegistrationDelegate$BeanPostProcessorChecker-postProcessAfterInitialization]-Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46c846a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-22 10:11:05,704[service-test,,,][INFO][TomcatWebServer-initialize]-Tomcat initialized with port(s): 8080 (http)
+2019-02-22 10:11:05,719[service-test,,,][INFO][Http11NioProtocol-log]-Initializing ProtocolHandler ["http-nio-8080"]
+2019-02-22 10:11:05,728[service-test,,,][INFO][StandardService-log]-Starting service [Tomcat]
+2019-02-22 10:11:05,728[service-test,,,][INFO][StandardEngine-log]-Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-02-22 10:11:05,737[service-test,,,][INFO][AprLifecycleListener-log]-The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\tools\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\TortoiseSVN\bin;D:\tools\Java\jdk1.8.0_144\bin;D:\tools\apache-maven-3.5.0\bin;D:\tools\Git\cmd;D:\software\PuTTY\;C:\Program Files\Microsoft\Web Platform Installer\;D:\tools\Redis\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\tools\Python\Scripts\;D:\tools\Python\;C:\Users\rencc\AppData\Local\Microsoft\WindowsApps;D:\software\IntelliJ IDEA 2018.3.1\bin;C:\Users\rencc\AppData\Local\GitHubDesktop\bin;.]
+2019-02-22 10:11:05,946[service-test,,,][INFO][[/]-log]-Initializing Spring embedded WebApplicationContext
+2019-02-22 10:11:05,947[service-test,,,][INFO][ContextLoader-prepareWebApplicationContext]-Root WebApplicationContext: initialization completed in 2274 ms
+2019-02-22 10:11:07,305[service-test,,,][INFO][PropertySourcedRequestMappingHandlerMapping-initHandlerMethods]-Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-22 10:11:07,475[service-test,,,][INFO][ThreadPoolTaskExecutor-initialize]-Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-22 10:11:07,992[service-test,,,][INFO][DocumentationPluginsBootstrapper-start]-Context refreshed
+2019-02-22 10:11:08,015[service-test,,,][INFO][DocumentationPluginsBootstrapper-start]-Found 1 custom documentation plugin(s)
+2019-02-22 10:11:08,056[service-test,,,][INFO][ApiListingReferenceScanner-scan]-Scanning for api listing references
+2019-02-22 10:11:08,251[service-test,,,][INFO][Http11NioProtocol-log]-Starting ProtocolHandler ["http-nio-8080"]
+2019-02-22 10:11:08,280[service-test,,,][INFO][TomcatWebServer-start]-Tomcat started on port(s): 8080 (http) with context path ''
+2019-02-22 10:11:08,285[service-test,,,][INFO][TestServiceApplication-logStarted]-Started TestServiceApplication in 5.657 seconds (JVM running for 6.857)
+2019-02-22 10:11:11,864[service-test,,,][INFO][[/]-log]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-22 10:11:11,865[service-test,,,][INFO][DispatcherServlet-initServletBean]-Initializing Servlet 'dispatcherServlet'
+2019-02-22 10:11:11,878[service-test,,,][INFO][DispatcherServlet-initServletBean]-Completed initialization in 13 ms
+2019-02-22 10:11:11,909[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> url:[0m http://localhost:8080/user
+2019-02-22 10:11:11,910[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> method:  GET[0m
+2019-02-22 10:11:11,911[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+2019-02-22 10:11:11,914[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> class_method:  com.rcc.test.controller.TestController,findPageList[0m
+2019-02-22 10:11:11,938[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> args:  [][0m
+2019-02-22 10:11:12,065[service-test,,,][INFO][DruidDataSource-init]-{dataSource-1} inited
+2019-02-22 10:11:12,380[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> SELECT id,name FROM user where 1=1 and name like CONCAT('任','%')[0m
+2019-02-22 10:11:12,380[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> Total: 2      Spend Time: 366 ms[0m
+2019-02-22 10:11:12,382[service-test,,,][INFO][HttpAspect-doAfterReturing]-[0;34m==> response: "2"[0m
+2019-02-22 10:11:16,690[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> url:[0m http://localhost:8080/user
+2019-02-22 10:11:16,691[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> method:  GET[0m
+2019-02-22 10:11:16,691[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> IP:  0:0:0:0:0:0:0:1[0m
+2019-02-22 10:11:16,692[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> class_method:  com.rcc.test.controller.TestController,findPageList[0m
+2019-02-22 10:11:16,692[service-test,,,][INFO][HttpAspect-doBefore]-[0;34m==> args:  [][0m
+2019-02-22 10:11:16,700[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> SELECT id,name FROM user where 1=1 and name like CONCAT('任','%')[0m
+2019-02-22 10:11:16,700[service-test,,,][INFO][findByWhere-formatSqlLog]-[0;33m==> Total: 2      Spend Time: 7 ms[0m
+2019-02-22 10:11:16,702[service-test,,,][INFO][HttpAspect-doAfterReturing]-[0;34m==> response: "2"[0m
+2019-02-22 10:16:55,533[service-test,,,][INFO][ThreadPoolTaskExecutor-shutdown]-Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-22 10:16:55,570[service-test,,,][INFO][DruidDataSource-close]-{dataSource-1} closed

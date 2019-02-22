@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    test:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://hzmysql01:3306/test?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: 123456
+      typeAliasesPackage: com.rcc.test.entity
+      mybatisConfigLocation: classpath:/mapper/test/*.xml
+  redis:
+    host: 172.16.13.61
+    password:
+    port: 6379
+    database: 2
+    timeout: 3600
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+
+sqlLog:
+  isUse: true
+
+#logging:
+#  level:
+#    com.rcc.test.dao: debug

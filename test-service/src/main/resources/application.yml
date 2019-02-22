@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: service-test
+  profiles:
+    active: dev
+pagehelper:
+  offsetAsPageNum: true
+  rowBoundsWithCount: true
+  reasonable: true
+my:
+  hello: Hello World!
+logging:
+  config: classpath:logback-boot.xml
