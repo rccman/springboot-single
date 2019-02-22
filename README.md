@@ -1,6 +1,6 @@
 # springboot-single
 Spring Boot 单体项目架构搭建
-
+CSDN：[加了白糖的老干妈](https://blog.csdn.net/qq_21358931/article/details/87877984)    
 [TOC]
 
 ## 架构介绍
@@ -19,7 +19,7 @@ Spring Boot 单体项目架构搭建
 此次架构搭建是以Spring Boot 2.1.3最新版为基础,集成的内容有:
 
 1.ORM框架Mybatis,手写了Mybatis插件的SQL拦截器用于打印SQL(PS:优于默认配置)  
-2.集成了MySQL多数据源配置
+2.集成了MySQL多数据源配置  
 3.分页插件PageHelper,封装了PageHelper的若干内容,分页查询更为便利。  
 4.集成了Redis并封装了操作Redis的工具方法,提供两种存储String和Hash。  
 5.集成Swagger,便于生成API文档和接口测试  
