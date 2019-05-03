@@ -3,6 +3,12 @@ Spring Boot 单体项目架构搭建
 CSDN：[加了白糖的老干妈](https://blog.csdn.net/qq_21358931/article/details/87877984)    
 [TOC]
 
+## 分支说明
+
+- master 主分支
+- base 架构基础分支（纯架构搭建，不含其余代码）
+- dev 日常使用分支
+
 ## 架构介绍
 此次搭建的架构是面向前后端分离开发，纯后台服务，未集成前端模板内容。
 ## 技术栈
@@ -26,3 +32,5 @@ CSDN：[加了白糖的老干妈](https://blog.csdn.net/qq_21358931/article/deta
 6.封装了统一异常管理,封装了自定义异常，结合国际化Message使用,统一了接口返回参数,封装了@Validated返回参数  
 7.集成了Spring Cloud Stream消息驱动用于操作RabbitMQ    
 8.AOP封装了请求监听，用于打印请求生命周期的信息
+
+
