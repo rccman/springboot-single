@@ -1,5 +1,8 @@
 package com.rcc.test.test.factory.abstractFun;
 
+/**
+ * 抽象工厂测试类
+ */
 public class AbstractFactoryTest {
     public static void main(String[] args) {
         //客车
