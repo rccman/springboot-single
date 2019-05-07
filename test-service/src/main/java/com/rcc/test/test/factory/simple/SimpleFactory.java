@@ -22,23 +22,6 @@ public class SimpleFactory {
         return null;
     }
 
-    public static Object getClass(Class<? extends Shape> clazz) {
-        Object obj = null;
-
-        try {
-            obj = Class.forName(clazz.getName()).newInstance();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
-        return obj;
-    }
-
-
 
     public static void main(String[] args) {
         // 获取 Circle 的对象，并调用它的 draw 方法
