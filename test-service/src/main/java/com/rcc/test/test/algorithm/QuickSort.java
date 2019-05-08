@@ -1,34 +1,43 @@
 package com.rcc.test.test.algorithm;
 
 /**
- * 快速排序
+ * 快速排序,不能有重复元素
  */
 public class QuickSort {
-    /**
-     * 查找出中轴（默认是最低位low）的在numbers数组排序后所在位置
-     *
-     * @param numbers 带查找数组
-     * @param low   开始位置
-     * @param high  结束位置
-     * @return  中轴所在位置
-     */
-    public static int getMiddle(int[] numbers, int low,int high)
-    {
-        int temp = numbers[low]; //数组的第一个作为中轴
-        while(low < high)
-        {
-            while(low < high && numbers[high] > temp)
-            {
-                high--;
-            }
-            numbers[low] = numbers[high];//比中轴小的记录移到低端
-            while(low < high && numbers[low] < temp)
-            {
-                low++;
-            }
-            numbers[high] = numbers[low] ; //比中轴大的记录移到高端
+
+
+    public static void main(String[] args) {
+        int[] arr = {1,6, 7, 4, 2, 9, 1, 8};
+        quickSort(arr, 0, arr.length - 1);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+"");
         }
-        numbers[low] = temp ; //中轴记录到尾
-        return low ; // 返回中轴的位置
+    }
+
+    private static void quickSort(int[] arr, int start, int end) {
+        if(start < end){
+            int mid = getMidIndex(arr,start,end);
+            quickSort(arr,start,mid);
+            quickSort(arr,mid+1,end);
+        }
+    }
+
+    private static int getMidIndex(int[] arr, int start, int end) {
+        int tmp = arr[start];
+        while (start < end){
+            //从后往前找，小于tmp的，换到start位置
+            while (start < end && arr[end] >= tmp){
+                end--;
+            }
+            arr[start] = arr[end];
+            //从前往后找，大于tmp的，换到end位置
+            while (start < end && arr[start] <= tmp ){
+                start++;
+            }
+            arr[end] = arr[start];
+        }
+        //当start = end后，即使中心位置，也是tmp应该在的位置
+        arr[start] = tmp;
+        return start;
     }
 }
