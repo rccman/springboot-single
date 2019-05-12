@@ -1,4 +1,4 @@
-package com.rcc.test.test.arrShift;
+package com.rcc.test.test.algorithm.arrShift;
 
 public class ArryShift {
     public static void main(String[] args) {
