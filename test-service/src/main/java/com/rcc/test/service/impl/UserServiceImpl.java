@@ -25,24 +25,30 @@ public class UserServiceImpl extends BaseService<UserEntity,UserParam, UserDao> 
     @Override
     public RestResult testFutureTask() throws ExecutionException, InterruptedException {
         long currentTimeMillis = System.currentTimeMillis();
-        Future<Object> submit1 = executorService.submit(new Callable<Object>() {
+        Future<UserEntity> submit1 = executorService.submit(new Callable<UserEntity>() {
             @Override
-            public Object call() throws Exception {
+            public UserEntity call() throws Exception {
+                UserEntity userEntity = new UserEntity();
+                userEntity.setId(1);
+                userEntity.setName("Thread1");
                 int time = 5000;
                 System.out.println("Thread1 线程开始");
                 Thread.sleep(time);
                 System.out.println("Thread1 线程结束");
-                return time;
+                return userEntity;
             }
         });
-        Future<Object> submit2 = executorService.submit(new Callable<Object>() {
+        Future<UserEntity> submit2 = executorService.submit(new Callable<UserEntity>() {
             @Override
-            public Object call() throws Exception {
+            public UserEntity call() throws Exception {
+                UserEntity userEntity = new UserEntity();
+                userEntity.setId(2);
+                userEntity.setName("Thread2");
                 int time = 8000;
                 System.out.println("Thread2 线程开始");
                 Thread.sleep(time);
                 System.out.println("Thread2 线程结束");
-                return time;
+                return userEntity;
             }
         });
         System.out.println("Thread1 休眠时间："+ submit1.get());
