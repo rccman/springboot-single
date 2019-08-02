@@ -19,21 +19,20 @@ spring:
         max-wait: -1
         max-idle: 500
         min-idle: 0
-#  rabbitmq:
-#    host: 172.16.12.76
-#    port: 5672
-#    username: admin
-#    password: admin
-#  cloud:
-#    stream:
-#      bindings:
-#        input:
-#          #指定输入通道对应的主题名
-#          destination: test_6
-#          content-type: application/json
-#        output:
-#          destination: test_6
-#          content-type: application/json
+  cloud:
+    stream:
+      bindings:
+        input:
+          #指定输入通道对应的主题名
+          destination: test_topic
+          content-type: application/json
+          group: test_group
+        output:
+          destination: test_topic
+          content-type: application/json
+      rocketmq:
+        binder:
+          name-server: 172.17.6.128:9876
   # spring cloud 服务调用
 eureka:
   instance:

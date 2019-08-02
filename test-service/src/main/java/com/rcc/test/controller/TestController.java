@@ -4,8 +4,7 @@ import com.rcc.api.entity.TestParam;
 import com.rcc.api.entity.UserParam;
 import com.rcc.test.base.PageBean;
 import com.rcc.test.base.RestResult;
-//import com.rcc.test.config.stream.StreamClient;
-//import com.rcc.test.config.stream.StreamProducer;
+import com.rcc.test.config.stream.StreamProducer;
 import com.rcc.test.exception.RestException;
 import com.rcc.test.service.UserService;
 import com.rcc.test.utils.RedisService;
@@ -34,8 +33,8 @@ public class TestController {
     private UserService userService;
     @Autowired
     private RedisService redisService;
-    /*@Autowired
-    private StreamProducer streamProducer;*/
+    @Autowired
+    private StreamProducer streamProducer;
 
     @GetMapping("/")
     public String home() {
@@ -113,9 +112,8 @@ public class TestController {
     @PostMapping("/sendMessageMQ")
     @ResponseBody
     public RestResult sendMessageMQ(@RequestBody @Validated TestParam testParam) throws RestException {
-//        boolean send = streamProducer.produceMsg(testParam);
-//        return ResultUtil.success(send);
-        return null;
+        boolean send = streamProducer.produceMsg(testParam);
+        return ResultUtil.success(send);
     }
 
     @PostMapping("/testFutureTask")
