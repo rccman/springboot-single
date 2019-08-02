@@ -19,21 +19,21 @@ spring:
         max-wait: -1
         max-idle: 500
         min-idle: 0
-  rabbitmq:
-    host: 172.16.12.76
-    port: 5672
-    username: admin
-    password: admin
-  cloud:
-    stream:
-      bindings:
-        input:
-          #指定输入通道对应的主题名
-          destination: test_6
-          content-type: application/json
-        output:
-          destination: test_6
-          content-type: application/json
+#  rabbitmq:
+#    host: 172.16.12.76
+#    port: 5672
+#    username: admin
+#    password: admin
+#  cloud:
+#    stream:
+#      bindings:
+#        input:
+#          #指定输入通道对应的主题名
+#          destination: test_6
+#          content-type: application/json
+#        output:
+#          destination: test_6
+#          content-type: application/json
   # spring cloud 服务调用
 eureka:
   instance:

@@ -4,8 +4,8 @@ import com.rcc.api.entity.TestParam;
 import com.rcc.api.entity.UserParam;
 import com.rcc.test.base.PageBean;
 import com.rcc.test.base.RestResult;
-import com.rcc.test.config.stream.StreamClient;
-import com.rcc.test.config.stream.StreamProducer;
+//import com.rcc.test.config.stream.StreamClient;
+//import com.rcc.test.config.stream.StreamProducer;
 import com.rcc.test.exception.RestException;
 import com.rcc.test.service.UserService;
 import com.rcc.test.utils.RedisService;
@@ -16,11 +16,11 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.integration.support.MessageBuilder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 
 
 @Api(tags = "测试控制器")
@@ -34,8 +34,8 @@ public class TestController {
     private UserService userService;
     @Autowired
     private RedisService redisService;
-    @Autowired
-    private StreamProducer streamProducer;
+    /*@Autowired
+    private StreamProducer streamProducer;*/
 
     @GetMapping("/")
     public String home() {
@@ -113,8 +113,14 @@ public class TestController {
     @PostMapping("/sendMessageMQ")
     @ResponseBody
     public RestResult sendMessageMQ(@RequestBody @Validated TestParam testParam) throws RestException {
-        boolean send = streamProducer.produceMsg(testParam);
-        return ResultUtil.success(send);
+//        boolean send = streamProducer.produceMsg(testParam);
+//        return ResultUtil.success(send);
+        return null;
     }
 
+    @PostMapping("/testFutureTask")
+    @ResponseBody
+    public RestResult testFutureTask(@RequestBody @Validated TestParam testParam) throws RestException, ExecutionException, InterruptedException {
+        return userService.testFutureTask();
+    }
 }
