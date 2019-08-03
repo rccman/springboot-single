@@ -6,5 +6,6 @@ import lombok.Data;
 public class UserEntity {
     private int id;
     private String name;
+    private Long value;
 
 }
