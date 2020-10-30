@@ -9,16 +9,20 @@ import com.rcc.test.exception.RestException;
 import com.rcc.test.service.UserService;
 import com.rcc.test.utils.RedisService;
 import com.rcc.test.utils.ResultUtil;
+import com.rcc.test.utils.ThreadPoolUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 
@@ -120,5 +124,30 @@ public class TestController {
     @ResponseBody
     public RestResult testFutureTask(@RequestBody @Validated TestParam testParam) throws RestException, ExecutionException, InterruptedException {
         return userService.testFutureTask();
+    }
+
+    public static void main(String[] args) {
+        String s1 = new String("计算机");
+        String s2 = s1.intern();
+        String s3 = "计算机";
+        System.out.println(s2);//计算机
+        System.out.println(s1 == s2);//false，因为一个是堆内存中的 String 对象一个是常量池中的 String 对象，
+        System.out.println(s3 == s2);//true，因为两个都是常量池中的 String 对象
+        Runnable runnable = () -> System.out.println(System.currentTimeMillis());
+        runnable.run();
+        ThreadPoolUtil.threadPool.submit(() ->{
+            System.out.println("当前系统时间是：");
+            System.out.println(System.currentTimeMillis());
+        });
+        Runnable runnable1 = System::currentTimeMillis;
+        runnable1.run();
+
+        final int num = 1;
+        Converter<Integer, String> stringConverter =
+                (from) -> String.valueOf(from + num);
+
+        stringConverter.convert(2);     // 3
+
+
     }
 }
