@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @EnableBinding({ StreamClient.class })
 @Component
 public class StreamProducer {
- 
+
     @Autowired
     private StreamClient streamClient;
- 
+
     public Boolean produceMsg(Object message) {
         return streamClient.output().send(MessageBuilder.withPayload(message).build());
     }

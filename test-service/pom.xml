@@ -49,9 +49,16 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+            <artifactId>spring-cloud-stream-binder-rocketmq</artifactId>
+            <version>0.9.0.RELEASE</version>
         </dependency>
-
+        <!--添加lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.rcc</groupId>
             <artifactId>test-api</artifactId>
